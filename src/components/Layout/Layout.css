@@ -1,0 +1,38 @@
+.modal{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    justify-content: center;
+}
+.modal .container{
+    background-color: var(--primary-gray-color);
+    min-width: 30rem;
+    min-height: 20rem;
+    pointer-events: all;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.2rem;
+    box-sizing: border-box;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff, inset -2px -2px #808080, inset 2px 2px #dfdfdf;
+}
+.modal .container nav{
+    padding: 0.2rem;
+    padding-left: 0.5rem;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, rgba(0,0,255,1) 10%, rgba(0,0,128,1) 30%);
+}
+.modal .container nav > span{
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+
+}
+#close-icon{
+    /* border: none; */
+    color: var(--primary-gray-color);
+    font-size: 1.5rem;
+    padding: 0.2rem;
+    box-sizing: border-box;
+    /* cursor: pointer; */
+}

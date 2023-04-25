@@ -56,19 +56,24 @@
     box-sizing: border-box;
     bottom: 0;
 }
-.taskbar button{
+.button{
     background-color: var(--primary-gray-color);
     font-weight: 600;
     font-size: 0.8rem;
     letter-spacing: 1px;
-    padding: 0.3rem 0.5rem;
     gap: 0.3rem;
     border: none;
     user-select: none;
     box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff, inset -2px -2px #808080, inset 2px 2px #dfdfdf;
 }
-.taskbar button:active{
+.button:hover{
+    cursor: pointer;
+}
+.button:active{
     box-shadow: -1px -1px #0a0a0a, 1px 1px #ffffff, -2px -2px #808080, 2px 2px #dfdfdf;
+}
+.taskbar button{
+    padding: 0.3rem 0.5rem;
 }
 .taskbar button img{
     width: 20px;

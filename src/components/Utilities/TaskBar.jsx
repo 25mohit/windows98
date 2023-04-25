@@ -21,7 +21,7 @@ const TaskBar = () => {
     <div className='taskbar flex-center-between'>
       { showMenu && <MainMenu /> }
       <div className="start">
-        <button className='flex-center' onClick={() => setShowMenu(!showMenu)}><img src={windows} /> Start</button>
+        <button className='flex-center button' onClick={() => setShowMenu(!showMenu)}><img src={windows} /> Start</button>
       </div>
       <div className="time">
         <span>{currentTime}</span>
