@@ -11,6 +11,40 @@
     background-color: var(--primary-main-color);
     width: 100%;
     height: calc(100vh - var(--taskbar-height));
+    padding: 1.2rem 1.7rem;
+    box-sizing: border-box;
+    gap: 3rem;
+}
+.desktop .container{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.icon{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    margin-right: 1.3rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    justify-content: center;
+}
+.icon .icon-img{
+    width: 65%;
+    user-select: none;
+}
+.icon .label{
+    white-space:nowrap;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    color: white;
+    user-select: none;
+    letter-spacing: 0.4px;
 }
 .taskbar{
     background-color: var(--primary-gray-color);
@@ -28,12 +62,16 @@
     font-size: 0.8rem;
     letter-spacing: 1px;
     padding: 0.3rem 0.5rem;
+    gap: 0.3rem;
     border: none;
     user-select: none;
     box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff, inset -2px -2px #808080, inset 2px 2px #dfdfdf;
 }
 .taskbar button:active{
     box-shadow: -1px -1px #0a0a0a, 1px 1px #ffffff, -2px -2px #808080, 2px 2px #dfdfdf;
+}
+.taskbar button img{
+    width: 20px;
 }
 .taskbar .time span{
     text-transform: uppercase;
@@ -73,7 +111,7 @@
     box-sizing: border-box;
     width: calc(100% - 40px);
 }
-.main-menu .menu ul{
+.main-menu .menu .ul{
     list-style: none;
     margin: 0;
     height: 100%;
@@ -84,15 +122,84 @@
     /* justify-content: space-between; */
     padding: 0;
 }
-.main-menu .menu ul li{
+.main-menu .menu .ul .li{
     padding: 0.53rem 0.8rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
     width: 100%;
+    position: relative;
 }
-.main-menu .menu ul li:hover{
+.main-menu .menu .ul .li:hover{
+    background-color: rgba(0,0,128,1);
+    cursor: pointer;
+    color: white;
+}
+.main-menu .menu .ul .li .second-level{
+    background-color: var(--primary-gray-color);
+    position: absolute;
+    display: none;
+    border-left: 2px solid #e4e3e3;
+    box-shadow: 1px 1px 0.5px 1px rgba(86, 86, 86, 0.658);
+    width: var(--menu-width-secondary);
+    right: -13rem;
+    top: 0;
+    
+}
+.main-menu .menu .ul .li:hover .second-level{
+    display: block;
+}
+.main-menu .menu .ul .li .second-level .ul-2{
+    margin: 0;
+    padding: 0;
+}
+.main-menu .menu .ul .li .second-level .ul-2 .li-2{
+    padding: 0.53rem 0.8rem;
+    display: flex;
+    align-items: center;
+    color: black;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+}
+.main-menu .menu .ul .li .second-level .ul-2 .li-2:hover{
+    background-color: rgba(0,0,128,1);
+    cursor: pointer;
+    color: white;
+}
+.main-menu .menu .ul .li .second-level .ul-2 .li-2 .third-level{
+    position: absolute;
+    background-color: var(--primary-gray-color);
+    right: -13rem;
+    top: 0.5px;
+    display: none;
+    z-index: 20;
+    list-style: none;
+    border-left: 2px solid #e4e3e3;
+    box-shadow: 1px 1px 0.5px 1px rgba(86, 86, 86, 0.658);
+    width: var(--menu-width-secondary);
+}   
+.main-menu .menu .ul .li .second-level .ul-2 .li-2:hover .third-level{
+    display: block;
+}
+.main-menu .menu .ul .li .second-level .ul-2 .li-2 .third-level .ul-3{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.main-menu .menu .ul .li .second-level .ul-2 .li-2 .third-level .ul-3 .li-3{
+    padding: 0.53rem 0.8rem;
+    display: flex;
+    align-items: center;
+    color: black;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 30;
+}
+.main-menu .menu .ul .li .second-level .ul-2 .li-2 .third-level .ul-3 .li-3:hover{
     background-color: rgba(0,0,128,1);
     cursor: pointer;
     color: white;

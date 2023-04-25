@@ -4,6 +4,10 @@
   --primary-gray-color: rgba(192,192,192,1);
   --primary-main-color: rgba(0,128,128,1);
   --menu-width: 15rem;
+  --menu-width-secondary: 13rem;
+}
+a{
+  text-decoration: none;
 }
 .App {
   margin: -8px;

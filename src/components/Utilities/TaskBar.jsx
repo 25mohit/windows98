@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import MainMenu from './Menu/MainMenu';
+import windows from '../../Assets/icons/windows-0.png'
 
 const TaskBar = () => {
   const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString([], {hour:'2-digit', minute: '2-digit', hour12: true}))
@@ -7,9 +8,7 @@ const TaskBar = () => {
   const [showMenu, setShowMenu] = useState(false)
 
   useEffect(() => {
-    console.log("useEffect Runs");
     const getTime = setInterval(() => {
-      console.log("Time Out Runs");
       setCurrentTime(new Date().toLocaleTimeString([], {hour:'2-digit', minute: '2-digit', hour12: true}))
     },30000)
     return () => {
@@ -22,7 +21,7 @@ const TaskBar = () => {
     <div className='taskbar flex-center-between'>
       { showMenu && <MainMenu /> }
       <div className="start">
-        <button className='flex-center' onClick={() => setShowMenu(!showMenu)}>Start</button>
+        <button className='flex-center' onClick={() => setShowMenu(!showMenu)}><img src={windows} /> Start</button>
       </div>
       <div className="time">
         <span>{currentTime}</span>
