@@ -14,3 +14,13 @@ a{
   width: 100vw;
   height: 100vh;
 }
+
+.flex-center{
+  display: flex;
+  align-items: center;
+}
+.flex-center-between{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

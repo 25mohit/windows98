@@ -209,3 +209,17 @@
     cursor: pointer;
     color: white;
 }
+.folder-bar-icon{
+    flex-direction: column;
+    padding: 0.1rem 1rem;
+    box-sizing: border-box;
+    justify-content: center;
+}
+.folder-bar-icon #folder-bar-icon{
+    font-size: 1.4rem;
+    color: #3f3e3e;
+    margin-bottom: -3px;
+}
+.folder-bar-icon > .label{
+    font-size: 0.9rem;
+}
